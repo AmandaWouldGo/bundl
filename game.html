@@ -4,18 +4,25 @@
 	<title>GameGyft</title>
 
 	
-   <style type="text/css">
-	<link rel="stylesheet" type="text/css" href="game.css">
+<!--    <style type="text/css" -->
+
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
 	<link type="text/css" rel="stylesheet" href="stylesheets/materialize.css"  media="screen,projection"/>
 
-	 <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Orbitron">
+ <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Raleway">
     <style>
-      body {
+      h1{
         font-family: 'Orbitron', serif;
         font-size: 30px;
         position: auto;
       }
+      body {
+        font-family: 'Raleway', serif;
+        font-size: 30px;
+        position: auto;
+      }
+
     </style>
     	<script src="assets/jquery-3.1.1.min.js"></script>
 	<script src="gamegyft.js"></script>
@@ -168,19 +175,14 @@ function myMove(e){
 		y1 = e.pageY - canvas.offsetTop;
 	}
 
-	if (x1 > 260 && x1 < 445 &&  y1 > 448){
-	// fund_card();
- 	// alert("You win!")
- 	$("#score").html("Score: <strong>5</strong>")
- 	$("#win_msg").html("<strong>You Win!</strong> Click to redeem your Gyft!")
- 	$("#win_msg").on("click", function() {
- 		fund_card()
- 	})
- 	// <input type="button" 
-	 //   value="Simulate Game Won - Fund Card Now!" 
-	 //   onclick="fund_card();"/>
+	// if (x1 > 260 && x1 < 445 &&  y1 > 448){
+	// // fund_card();
+ // 	// alert("You win!")
+ // 	// <input type="button" 
+	//  //   value="Simulate Game Won - Fund Card Now!" 
+	//  //   onclick="fund_card();"/>
  	
- }
+ // }
 }
 
 function mouseDown(e){
@@ -197,6 +199,11 @@ function mouseDown(e){
 function myUp(){
  dragok = false;
  canvas.onmousemove = null;
+ 	$("#score").html("Score: <strong>5</strong>")
+ 	$("#win_msg").html("<strong>You Win!</strong> Click to redeem your Gyft!")
+ 	$("#win_msg").on("click", function() {
+ 		fund_card()
+ 	})
 }
 
 function crashWith(otherobj) {

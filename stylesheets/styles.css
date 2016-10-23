@@ -17,7 +17,7 @@ grey: 75787B*/
 }
 
 body {
-	background-color: yellow;
+	background-color: #FEDD84;
 	padding-top: 60px;
  	overflow: auto;
   display: flex;
@@ -26,11 +26,11 @@ body {
   font-size:22px;
 }
 
-#container {
+.container {
   width: 500px;
   background-color: white;
   border-radius: 1vw;
-
+  padding: 15px;
 }
 
 main {
@@ -125,3 +125,11 @@ input, textarea {
   border-radius: 3px;
   margin-left: auto;
 }
+
+#gameCanvas {
+	border-style: solid;
+	border-color: black;
+	background: url("backImage.jpg");
+	background-size: 500px 350px;
+}
+
