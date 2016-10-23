@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GameGyft</title>
+	<link rel="stylesheet" type="text/css" href="game.css">
+	 <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Orbitron">
+    <style>
+      body {
+        font-family: 'Orbitron', serif;
+        font-size: 30px;
+        position: auto;
+      }
+    </style>
+    	<script src="assets/jquery-3.1.1.min.js"></script>
+	<script src="gamegyft.js"></script>
+</head>
+<body>
+	<div>
+		<h1>GameGyft</h1>
+	</div>
+	<canvas id="gameCanvas" width="500" height="350" style="background: url('backImage.jpg')"></canvas>
+	<div><input type="button" 
+	   value="Simulate Game Won - Fund Card Now!" 
+	   onclick="fund_card();" />
+</div>
+	<section>
+
+<script type="text/javascript">
+
+var canvas;
+var ctx;
+var x = 75;
+var y = 50;
+var WIDTH = 500;
+var HEIGHT = 350;
+var dragok = false;
+var img = new Image();   // Create new img element
+img.src = 'backImage.jpg'; // Set source path
+img.style.width = "500px";
+img.style.height = "350px";
+var gameCanvas = document.getElementById("gameCanvas");
+var basketImg = new Image();
+var appleImg = new Image();
+
+function rect(x,y,w,h) {
+ ctx.beginPath();
+ ctx.rect(x,y,w,h);
+ ctx.closePath();
+ ctx.fill();
+}
+
+function drawApple() {
+	ctx.beginPath();
+	ctx.closePath();
+}
+
+function clear() {
+ ctx.clearRect(0, 0, WIDTH, HEIGHT);
+ 
+}
+
+function init() {
+ canvas = document.getElementById("gameCanvas");
+ ctx = canvas.getContext("2d");
+ return setInterval(draw, 10);
+}
+
+function draw() {
+ clear();
+ appleImg.src = "Apple_Pin.PNG"
+ basketImg.src = "basket.png"
+ ctx.fillStyle = "#444444";
+ ctx.drawImage(gameCanvas, 0, 0)
+ rect(x - 15, y - 15, 20, 20);  // small rectangle
+ ctx.drawImage(basketImg, 250, 160)
+ ctx.drawImage(appleImg, x - 18, y - 33)
+}
+
+function myMove(e){
+ if (dragok){
+  x = e.pageX - canvas.offsetLeft;
+  console.log(x);
+  y = e.pageY - canvas.offsetTop;
+ }
+}
+
+function myDown(e){
+ if (e.pageX < x + 15 + canvas.offsetLeft && e.pageX > x - 15 +
+ canvas.offsetLeft && e.pageY < y + 15 + canvas.offsetTop &&
+ e.pageY > y -15 + canvas.offsetTop){
+  x = e.pageX - canvas.offsetLeft;
+  y = e.pageY - canvas.offsetTop;
+  dragok = true;
+  canvas.onmousemove = myMove;
+ }
+}
+
+function myUp(){
+ dragok = false;
+ canvas.onmousemove = null;
+}
+
+init();
+canvas.onmousedown = myDown;
+canvas.onmouseup = myUp;
+
+</script>
+
+</section>
+</body>
+</html>

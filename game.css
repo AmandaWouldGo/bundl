@@ -1,0 +1,7 @@
+#gameCanvas {
+	border-style: solid;
+	border-color: black;
+	background: url("backImage.jpg");
+	background-size: 500px 350px;
+}
+
