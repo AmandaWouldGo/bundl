@@ -35,12 +35,19 @@ img.src = 'backImage.jpg'; // Set source path
 img.style.width = "500px";
 img.style.height = "350px";
 var gameCanvas = document.getElementById("gameCanvas");
+var basketImg = new Image();
+var appleImg = new Image();
 
 function rect(x,y,w,h) {
  ctx.beginPath();
  ctx.rect(x,y,w,h);
  ctx.closePath();
  ctx.fill();
+}
+
+function drawApple() {
+	ctx.beginPath();
+	ctx.closePath();
 }
 
 function clear() {
@@ -56,16 +63,17 @@ function init() {
 
 function draw() {
  clear();
- // ctx.fillStyle = "#FAF7F8";
- // rect(0,0,WIDTH,HEIGHT);   // large rectangle
+ appleImg.src = "Apple_Pin.PNG"
  ctx.fillStyle = "#444444";
  ctx.drawImage(gameCanvas, 0, 0)
- rect(x - 15, y - 15, 30, 30);  // small rectangle
+ rect(x - 15, y - 15, 20, 20);  // small rectangle
+ ctx.drawImage(appleImg, x - 18, y - 33)
 }
 
 function myMove(e){
  if (dragok){
   x = e.pageX - canvas.offsetLeft;
+  console.log(x);
   y = e.pageY - canvas.offsetTop;
  }
 }
