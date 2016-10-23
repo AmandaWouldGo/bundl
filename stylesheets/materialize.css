@@ -2624,6 +2624,7 @@ html {
 ul {
   padding: 0;
   list-style-type: none;
+  
 }
 
 ul.browser-default,
@@ -2632,7 +2633,7 @@ ul.browser-default li {
 }
 
 ul li {
-  list-style-type: none;
+  /*list-style-type: none;*/
 }
 
 a {
