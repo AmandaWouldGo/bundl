@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>GameGyft</title>
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+	<link type="text/css" rel="stylesheet" href="stylesheets/materialize.css"  media="screen,projection"/>
+
+
+	<!-- jQuery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<head>
+	<meta charset="utf-8">
+	<title>GameGyft</title>
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+	<link type="text/css" rel="stylesheet" href="stylesheets/materialize.css"  media="screen,projection"/>
+
+
+	<!-- jQuery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<!-- header goes here -->
+	<header class="navbar navbar-fixed-top navbar-inverse">
+	  	<div class="container">
+	    	<a id="logo" href="#">GameGyft</a>
+			<nav class="nav navbar-nav navbar-right">
+					<li><a href="#">Logout</a></li> |
+					<li><a href="#">Help</a></li>
+			</nav>
+	  	</div>
+	</header>
+
+	<!-- main part of the page -->
+  	<div class="container">
+	  	<div id="video">
+	  		<video width="400" height="533" controls src="pokemovie.mov"></video>
+  		</div>
+
+  		<div id="overlay"><img src="transwork.gif" alt="Bang Boom!!!" style="width:400px;height:400;">
+  		</div>
+
+  		<script type="text/javascript">
+  			var vid = $('video')[0];
+				$(vid).live('playing', function() {
+	    		alert('Playing!');
+			});
+  		</script>
+
+
+	    <!-- Footer goes here -->
+	    <footer class="footer">
+			<small>
+				The GameGyft App</a>
+		    	by <a href="https://github.com/AmandaWouldGo/gamegyft">Team GameGyft</a> |
+		    	<a href="#">About</a> |
+		    	<a href="#">Contact</a>
+			</small>
+		</footer>
+    </div>
+</body>
+</html>
