@@ -114,10 +114,21 @@ input, textarea {
   @include box_sizing;
 }
 
+<<<<<<< HEAD
+div.fixed {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+
+=======
 #center {
   margin: auto;
   width: 200px;
 }
+>>>>>>> 0580d6d14d653caff122c3fd71dce7e2f265ee22
 
 #button {
   border-radius: 3px;
