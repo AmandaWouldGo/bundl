@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8"> 
+	<title>GameGyft</title>
 
+	<!-- Stylesheet -->
 	 <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Orbitron">
-    <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Raleway">
     <style>
       h1{
@@ -12,36 +13,76 @@
         font-size: 30px;
         position: auto;
       }
-      body {
+/*      body {
         font-family: 'Raleway', serif;
         font-size: 30px;
         position: auto;
-      }
+      }*/
 
     </style>
-	<link type="text/css" rel="stylesheet" href="stylesheets/materialize.css"  media="screen,projection"/>
-	<link type="text/css" rel="stylesheet" href="stylesheets/styles.css"  media="screen,projection"/>
-	<title>Pick a Challenge</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+
+	<!-- jQuery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 <body>
+	<header class="navbar navbar-fixed-top navbar-inverse">
+	  	<div class="container">
+	    	<a id="logo" href="#">GameGyft</a>
+			<div id="menubar">
+					<a href="#">Logout</a>
+					<a href="#">Help</a>
+			</div>
+	  	</div>
+	</header> 
 
-
+<style>
+	.choice {
+		border: solid 2px black;
+		padding: 20px;
+		clear: both;
+		margin-bottom: 40px;
+		text-align: center;
+		font-size: 24px;
+		border-radius: 4px;
+	}
+</style>
 <div class="container">
-	<h1>Pick a Challenge</h1>
+	<h1 style='margin-bottom: 40px'>Pick a Challenge</h1>
 	<div class="row">
 	    <form class="col s12">
 	      <div class="row">
-	      	
-	      	<a href="gyft-details.html">spelling</a>
-
+	      	<div class="choice">
+	      	<a href="gyft-details.html">SPELLING</a>
+</div>
 		  </div>
 		  <div class="row">
-		  	<a href="gyft-details.html">math</a>
-
+		  <div class="choice">
+		  	<a href="gyft-details.html">MATH</a>
+		  	</div>
 
 	      </div>
 		  
 	    </form>
+
+	   <footer class="footer">
+			<small>
+				The GameGyft App</a>
+		    	by <a href="https://github.com/AmandaWouldGo/gamegyft">Team GameGyft</a> |
+		    	<a href="#">About</a> |
+		    	<a href="#">Contact</a>
+			</small>
+		</footer>
 	  </div>
 
 </div>
