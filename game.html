@@ -32,6 +32,9 @@ var HEIGHT = 350;
 var dragok = false;
 var img = new Image();   // Create new img element
 img.src = 'backImage.jpg'; // Set source path
+img.style.width = "500px";
+img.style.height = "350px";
+var gameCanvas = document.getElementById("gameCanvas");
 
 function rect(x,y,w,h) {
  ctx.beginPath();
@@ -42,6 +45,7 @@ function rect(x,y,w,h) {
 
 function clear() {
  ctx.clearRect(0, 0, WIDTH, HEIGHT);
+ 
 }
 
 function init() {
@@ -52,10 +56,11 @@ function init() {
 
 function draw() {
  clear();
- ctx.fillStyle = "#FAF7F8";
- rect(0,0,WIDTH,HEIGHT);
+ // ctx.fillStyle = "#FAF7F8";
+ // rect(0,0,WIDTH,HEIGHT);   // large rectangle
  ctx.fillStyle = "#444444";
- rect(x - 15, y - 15, 30, 30);
+ ctx.drawImage(gameCanvas, 0, 0)
+ rect(x - 15, y - 15, 30, 30);  // small rectangle
 }
 
 function myMove(e){
