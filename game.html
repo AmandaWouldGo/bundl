@@ -12,13 +12,18 @@
         position: auto;
       }
     </style>
+    	<script src="assets/jquery-3.1.1.min.js"></script>
+	<script src="gamegyft.js"></script>
 </head>
 <body>
 	<div>
 		<h1>GameGyft</h1>
 	</div>
 	<canvas id="gameCanvas" width="500" height="350" style="background: url('backImage.jpg')"></canvas>
-	<div></div>
+	<div><input type="button" 
+	   value="Simulate Game Won - Fund Card Now!" 
+	   onclick="fund_card();" />
+</div>
 	<section>
 
 <script type="text/javascript">
@@ -64,9 +69,11 @@ function init() {
 function draw() {
  clear();
  appleImg.src = "Apple_Pin.PNG"
+ basketImg.src = "basket.png"
  ctx.fillStyle = "#444444";
  ctx.drawImage(gameCanvas, 0, 0)
  rect(x - 15, y - 15, 20, 20);  // small rectangle
+ ctx.drawImage(basketImg, 250, 160)
  ctx.drawImage(appleImg, x - 18, y - 33)
 }
 
