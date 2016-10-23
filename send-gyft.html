@@ -3,39 +3,40 @@
 <head>
 	<link type="text/css" rel="stylesheet" href="stylesheets/materialize.css"  media="screen,projection"/>
 	<link type="text/css" rel="stylesheet" href="stylesheets/styles.css"  media="screen,projection"/>
-
-	<title></title>
+	<title>Send Gyft To</title>
 </head>
 <body>
+
 <div id="container">
-	<h1>Send Gyft To:</h1>
+	<h1>Send Gyft To</h1>
 	<div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">Name</label>
-        </div>
+	    <form class="col s12">
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <input id="first_name" type="text" class="validate" value="Josie">
+	          <label for="first_name">Name</label>
+	        </div>
 			</div>
-			<div class="row">
-        <div class="input-field col s12">
-          <input id="age" type="text" class="validate">
-          <label for="age">Age</label>
-        </div>
-      </div>
+		  <div class="row">
+	        <div class="input-field col s12">
+	          <input id="age" type="text" class="validate" value="6">
+	          <label for="age">Age</label>
+	        </div>
+	      </div>
 			<div id="center" class="input-field  s4">
-				<input type="button" value="Continue" class="validate" id="button"
-					onclick="window.location.href = 'challenge-type.html'" />
+
+			<button class="btn waves-effect waves-light" type="button" 
+					onclick="window.location.href = 'challenge-type.html'" name="action">
+				Continue
+			</button>
+
 			</div>
-    </form>
-  </div>
+	    </form>
+	  </div>
 
-
-
-
-	<!-- <input type="button" value="Continue"
-		onclick="window.location.href = 'challenge-type.html'" /> -->
 </div>
+
+
 	<script src="assets/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="materialize.js"></script>
 </body>
