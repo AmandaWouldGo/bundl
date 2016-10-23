@@ -2,8 +2,7 @@
 <html>
 <head>
 	<link type="text/css" rel="stylesheet" href="stylesheets/materialize.css"  media="screen,projection"/>
-
-	<title></title>
+	<title>Payment Information</title>
 </head>
 <body>
 
@@ -16,11 +15,21 @@
 
 <input type="button"
 	   value="Gyft it Now!"
-	   onclick="window.location.href = 'send-success.html'" />
-
+	   onclick="collect_funds();" />
 
 
 	 <script src="assets/jquery-3.1.1.min.js"></script>
 	 <script type="text/javascript" src="materialize.min.js"></script>
+	 <script>
+	 	
+	 	function collect_funds() {
+			
+			$.post( "http://localhost:8080/visadirect", function( data ) {
+			  window.location.href = "send-success.html";
+			});
+		}
+
+
+	 </script>
 </body>
 </html>
