@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8">
 	<title>GameGyft</title>
 
-	<link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Tangerine">
+	
+<!--    <style type="text/css" -->
 
-	<!-- Stylesheet -->
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
 	<link type="text/css" rel="stylesheet" href="stylesheets/materialize.css"  media="screen,projection"/>
-		 <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Orbitron">
-    <link rel="stylesheet" type="text/css"
+
+ <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Raleway">
     <style>
       h1{
@@ -27,52 +24,15 @@
       }
 
     </style>
-
-
-	<!-- jQuery CDN -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-		<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-	<link type="text/css" rel="stylesheet" href="stylesheets/materialize.css"  media="screen,projection"/>
-
-	 <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Orbitron">
-    <style>
-      body {
-        font-family: 'Orbitron', serif;
-        font-size: 30px;
-        position: auto;
-      }
-    </style>
-
+    	<script src="assets/jquery-3.1.1.min.js"></script>
+	<script src="gamegyft.js"></script>
 </head>
 <body>
+	<div>
+		<h1>GameGyft</h1>
+	</div>
 
-	<!-- header goes here -->
-	<header class="navbar navbar-fixed-top navbar-inverse">
-	  	<div class="container">
-	    	<a id="logo" href="#">GameGyft</a>
-
-			<div id=menubar>
-				<a href="#">Logout</a>
-				<a href="#">Help</a>
-			</div>
-
-	  	</div>
-	</header>
-
-	<!-- main part of the page -->
-  	<div class="container">
-	  	<main>
-			<canvas id="gameCanvas" width="750" height="525" style="background: url('backImage.jpg')">
+	<canvas id="gameCanvas" width="750" height="525" style="background: url('backImage.jpg')">
 		<div id="overlay1" ><img src="Apple_Pin.PNG" height="42" width="42"></div>
 		<div id="overlay2"><img src="Apple_Pin.PNG"></div>
 		<div id="overlay3"><img src="Apple_Pin.PNG"></div>
@@ -215,19 +175,14 @@ function myMove(e){
 		y1 = e.pageY - canvas.offsetTop;
 	}
 
-	if (x1 > 260 && x1 < 445 &&  y1 > 448){
-	// fund_card();
- 	// alert("You win!")
- 	$("#score").html("Score: <strong>5</strong>")
- 	$("#win_msg").html("<strong>You Win!</strong> Click to redeem your Gyft!")
- 	$("#win_msg").on("click", function() {
- 		fund_card()
- 	})
- 	// <input type="button" 
-	 //   value="Simulate Game Won - Fund Card Now!" 
-	 //   onclick="fund_card();"/>
+	// if (x1 > 260 && x1 < 445 &&  y1 > 448){
+	// // fund_card();
+ // 	// alert("You win!")
+ // 	// <input type="button" 
+	//  //   value="Simulate Game Won - Fund Card Now!" 
+	//  //   onclick="fund_card();"/>
  	
- }
+ // }
 }
 
 function mouseDown(e){
@@ -244,6 +199,11 @@ function mouseDown(e){
 function myUp(){
  dragok = false;
  canvas.onmousemove = null;
+ 	$("#score").html("Score: <strong>5</strong>")
+ 	$("#win_msg").html("<strong>You Win!</strong> Click to redeem your Gyft!")
+ 	$("#win_msg").on("click", function() {
+ 		fund_card()
+ 	})
 }
 
 function crashWith(otherobj) {
@@ -272,18 +232,5 @@ canvas.onmouseup = myUp;
 </script>
 
 </section>
-		</main>
-
-	    <!-- Footer goes here -->
-	    <footer class="footer">
-			<small>
-				The GameGyft App</a>
-		    	by <a href="https://github.com/AmandaWouldGo/gamegyft">Team GameGyft</a> |
-		    	<a href="#">About</a> |
-		    	<a href="#">Contact</a>
-			</small>
-		</footer>
-
-    </div>
 </body>
 </html>
