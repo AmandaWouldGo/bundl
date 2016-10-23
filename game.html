@@ -19,7 +19,12 @@
 	<div>
 		<h1>GameGyft</h1>
 	</div>
-	<canvas id="gameCanvas" width="500" height="350" style="background: url('backImage.jpg')"></canvas>
+	<canvas id="gameCanvas" width="500" height="350" style="background: url('backImage.jpg')">
+		<div id="overlay1" ><img src="Apple_Pin.PNG"></div>
+		<div id="overlay2"><img src="Apple_Pin.PNG"></div>
+		<div id="overlay3"><img src="Apple_Pin.PNG"></div>
+		<div id="overlay4"><img src="Apple_Pin.PNG"></div>
+	</canvas>
 	<div><input type="button" 
 	   value="Simulate Game Won - Fund Card Now!" 
 	   onclick="fund_card();" />
@@ -41,51 +46,79 @@ img.style.width = "500px";
 img.style.height = "350px";
 var gameCanvas = document.getElementById("gameCanvas");
 var basketImg = new Image();
+var basketBottomImg = new Image();
 var appleImg = new Image();
+var appleImg2 = new Image();
+var appleImg3 = new Image();
+var appleImg4 = new Image();
+ appleImg.src = "Apple_Pin.PNG";
+  appleImg2.src = "Apple_Pin.PNG";
+   appleImg3.src = "Apple_Pin.PNG";
+    appleImg4.src = "Apple_Pin.PNG";
+var appleX = 0;
+var appleY = 0;
+var appleCount = 0;
 
 function rect(x,y,w,h) {
+
  ctx.beginPath();
  ctx.rect(x,y,w,h);
  ctx.closePath();
  ctx.fill();
 }
 
-function drawApple() {
-	ctx.beginPath();
-	ctx.closePath();
-}
 
 function clear() {
  ctx.clearRect(0, 0, WIDTH, HEIGHT);
- 
+
+}
+
+function makeApple() {
+	appleImg = new Image();
+	appleImg.src = "Apple_Pin.PNG";
+	ctx.drawImage(appleImg, x + 180, y+1)
 }
 
 function init() {
  canvas = document.getElementById("gameCanvas");
  ctx = canvas.getContext("2d");
  return setInterval(draw, 10);
+ makeApple();
+ makeApple();
+ makeApple();
 }
 
 function draw() {
  clear();
- appleImg.src = "Apple_Pin.PNG"
- basketImg.src = "basket.png"
+ makeApple();
+ basketImg.src = "basket.png";
+ basketBottomImg.src = "basket_bottom.png";
  ctx.fillStyle = "#444444";
- ctx.drawImage(gameCanvas, 0, 0)
+ ctx.drawImage(gameCanvas, 0, 0);
  rect(x - 15, y - 15, 20, 20);  // small rectangle
- ctx.drawImage(basketImg, 250, 160)
- ctx.drawImage(appleImg, x - 18, y - 33)
+ ctx.drawImage(basketImg, 250, 160);
+ ctx.drawImage(appleImg, x - 18, y - 33);
+ // ctx.drawImage(appleImg2, x - 45, y - 20);
+ // ctx.drawImage(appleImg3, x - 18, y - 33);
+ // ctx.drawImage(appleImg4, x - 18, y - 33);
+ ctx.drawImage(basketBottomImg, 250, 160);
 }
 
 function myMove(e){
  if (dragok){
   x = e.pageX - canvas.offsetLeft;
-  console.log(x);
+  appleX = x;
+  console.log("this is appleX")
+  console.log(appleX);
+  console.log("this is y:")
+  console.log(y);
   y = e.pageY - canvas.offsetTop;
+  appleY = y;
  }
 }
 
 function myDown(e){
+ 
  if (e.pageX < x + 15 + canvas.offsetLeft && e.pageX > x - 15 +
  canvas.offsetLeft && e.pageY < y + 15 + canvas.offsetTop &&
  e.pageY > y -15 + canvas.offsetTop){
@@ -94,12 +127,39 @@ function myDown(e){
   dragok = true;
   canvas.onmousemove = myMove;
  }
+
+ if (x > 290 && y > 296){
+ 	appleCount += 1;
+ }
+ if (appleCount > 5){
+ 	alert("You win!")
+ }
+
 }
 
 function myUp(){
  dragok = false;
  canvas.onmousemove = null;
 }
+
+function crashWith(otherobj) {
+			var myleft = this.x;
+			var myright = this.x + (this.width);
+			var mytop = this.y;
+			var appleBottom = this.y + (this.height);
+			var otherleft = otherobj.x;
+			var otherright = otherobj.x + (otherobj.width);
+			var othertop = otherobj.y;
+			var otherbottom = otherobj.y + (otherobj.height);
+			var crash = true;
+			if ((mybottom < othertop) ||
+					(mytop > otherbottom) ||
+					(myright < otherleft) ||
+					(myleft > otherright)) {
+				crash = false;
+			}
+			return crash;
+		}
 
 init();
 canvas.onmousedown = myDown;
