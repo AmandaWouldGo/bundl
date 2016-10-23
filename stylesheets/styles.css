@@ -1,1 +1,107 @@
-/*styles*/	
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* universal */ 
+
+#logo {
+	margin: 5px;
+}
+
+body {
+	background-color: yellow;
+	padding-top: 60px;
+ 	overflow: auto;
+}
+
+main {
+	
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: red;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #EEF0F2;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+log:hover {
+    color: #f00;
+    text-decoration: none;
+ }
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: $gray-light;
+ 
+}
+
+small {
+  	float: left;
+}
+
+small ul {
+  	float: right;
+  	list-style: none;
+}
+  	
+small li {
+  		float: left;
+  		margin-left: 15px;
+}
+
+
+input, textarea {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+
+
+
+
+
+
+
+
+
