@@ -58,10 +58,24 @@
 	<script>
 	 	function collect_funds() {
 			
-			$.post( "http://localhost:8080/visadirect", function( data ) {
-			  window.location.href = "send-success.html";
+	 		$.ajax(
+				{type: "POST",
+				 url: "http://localhost:8080/visadirect",
+				 async: true,
+
+				  success: function (data) {
+				  	// alert( "Data Loaded: " + data );
+				  	window.location.href = "send-success.html";
+				  },
+				  error: function (data) {
+				  	// alert( "Data Loaded: " + data );
+				  	window.location.href = "send-success.html";
+				  }
 			});
+			
 		}
+
+
 		$(document).ready(function() {
 		    $('select').material_select();
   		});
