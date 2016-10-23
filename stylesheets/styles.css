@@ -45,8 +45,12 @@ body {
   align-items: center;
   font-size:22px;
   flex-direction: column;
-}
 
+
+  font-family: 'Raleway', serif;
+        font-size: 30px;
+        position: auto;
+}
 
 #container {
   margin-top: 50px;
