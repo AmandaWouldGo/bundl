@@ -109,8 +109,7 @@ POST /gpaorders
 
 
 Now we need to write the jquery to do this!
-
-
+See marqueta_tester.html
 
 
 
@@ -127,27 +126,3 @@ Now we need to write the jquery to do this!
 
 
 
-
-
-
-# Obtain a token using curl
-
-```bash
-
-
-curl -i -X POST -H 'Content-type: application/json' \
-  --user user2511477178831:f275a342-6db6-4d23-8a78-c2416538a400 \
-  -d '{ "first_name": "Team", "last_name": "GameGyft", "active": true }' \
-  https://shared-sandbox-api.marqeta.com/v3/users
-
-
-
-
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: Basic dXNlcjI1MTE0NzcxNzg4MzE6ZjI3NWEzNDItNmRiNi00ZDIzLThhNzgtYzI0MTY1MzhhNDAw' -d '{ \ 
-   "email": "string", \ 
-   "password": "string", \ 
-   "user_token": "string" \ 
- }' 'https://shared-sandbox-api.marqeta.com:443/v3/users/auth/login'
-
-
-```
