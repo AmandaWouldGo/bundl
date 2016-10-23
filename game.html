@@ -3,6 +3,8 @@
 <head>
 	<title>GameGyft</title>
 	<link rel="stylesheet" type="text/css" href="game.css">
+	<link type="text/css" rel="stylesheet" href="stylesheets/materialize.min.css"  media="screen,projection"/>
+
 	 <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Orbitron">
     <style>
@@ -25,8 +27,8 @@
 		<div id="overlay3"><img src="Apple_Pin.PNG"></div>
 		<div id="overlay4"><img src="Apple_Pin.PNG"></div>
 	</canvas>
-	<div><input type="button" 
-	   value="Simulate Game Won - Fund Card Now!" 
+	<div><input type="button"
+	   value="Simulate Game Won - Fund Card Now!"
 	   onclick="fund_card();" />
 </div>
 	<section>
@@ -118,7 +120,7 @@ function myMove(e){
 }
 
 function myDown(e){
- 
+
  if (e.pageX < x + 15 + canvas.offsetLeft && e.pageX > x - 15 +
  canvas.offsetLeft && e.pageY < y + 15 + canvas.offsetTop &&
  e.pageY > y -15 + canvas.offsetTop){
