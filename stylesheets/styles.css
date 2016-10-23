@@ -23,11 +23,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-size:22px;
 }
 
 #container {
-  width: 40vw;
+  width: 500px;
   background-color: white;
   border-radius: 1vw;
 
@@ -112,7 +112,11 @@ input, textarea {
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
+  font-size: 1.5rem !important;
 }
+
+
+
 
 #center {
   margin: auto;

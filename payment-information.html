@@ -2,34 +2,71 @@
 <html>
 <head>
 	<link type="text/css" rel="stylesheet" href="stylesheets/materialize.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="stylesheets/styles.css"  media="screen,projection"/>
 	<title>Payment Information</title>
 </head>
 <body>
 
 
-<h1>Payment Information</h1>
-<div><select><option>Card Type: Visa</option></select></div>
-<div>card number</div>
-<div>card expiration</div>
+<div id="container">
+	<h1>Send Gyft To</h1>
+
+	<div class="row">
+	    <form class="col s12">
+	      
+	      <div class="row">
+	        <div class="input-field col s12">
+			    <select>
+			      <option>Choose your option</option>
+			      <option selected>Visa</option>
+			    </select>
+			    <label>Card Type</label>
+			  </div>
+		  </div>
+
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <input id="first_name" type="text" class="validate" value="4895142232120006">
+	          <label for="first_name">Card Number</label>
+	        </div>
+		  </div>
 
 
-<input type="button"
-	   value="Gyft it Now!"
-	   onclick="collect_funds();" />
+		  <div class="row">
+	        <div class="input-field col s12">
+	          <input id="age" type="text" class="validate" value="02/20">
+	          <label for="age">Card Expiration</label>
+	        </div>
+	      </div>
+
+			<div id="center" class="input-field  s4">
+
+			<button class="btn waves-effect waves-light" type="button" 
+					onclick="collect_funds();" name="action">
+				Gyft it Now!
+			</button>
+
+			</div>
+	    </form>
+	  </div>
+
+</div>
 
 
-	 <script src="assets/jquery-3.1.1.min.js"></script>
-	 <script type="text/javascript" src="materialize.min.js"></script>
-	 <script>
-	 	
+	<script src="assets/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="materialize.js"></script>
+	<script>
 	 	function collect_funds() {
 			
 			$.post( "http://localhost:8080/visadirect", function( data ) {
 			  window.location.href = "send-success.html";
 			});
 		}
-
+		$(document).ready(function() {
+		    $('select').material_select();
+  		});
 
 	 </script>
+
 </body>
 </html>
