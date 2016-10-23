@@ -1,10 +1,16 @@
+/*blue: 1a1F71
+white: FFFFFF
+yellow: FDBB0A
+orange yellow: FAAA13
+grey: 75787B*/
+
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* universal */ 
+/* universal */
 
 #logo {
 	margin: 5px;
@@ -14,10 +20,21 @@ body {
 	background-color: yellow;
 	padding-top: 60px;
  	overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#container {
+  width: 40vw;
+  background-color: white;
+  border-radius: 1vw;
+
 }
 
 main {
-	
+
 }
 
 /* typography */
@@ -25,6 +42,7 @@ main {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
+
 
 h1 {
   font-size: 3em;
@@ -71,7 +89,7 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: $gray-light;
- 
+
 }
 
 small {
@@ -82,7 +100,7 @@ small ul {
   	float: right;
   	list-style: none;
 }
-  	
+
 small li {
   		float: left;
   		margin-left: 15px;
@@ -96,6 +114,7 @@ input, textarea {
   @include box_sizing;
 }
 
+<<<<<<< HEAD
 div.fixed {
     position: absolute;
     bottom: 0;
@@ -104,12 +123,14 @@ div.fixed {
     border: 3px solid #73AD21;
 }
 
+=======
+#center {
+  margin: auto;
+  width: 200px;
+}
+>>>>>>> 0580d6d14d653caff122c3fd71dce7e2f265ee22
 
-
-
-
-
-
-
-
-
+#button {
+  border-radius: 3px;
+  margin-left: auto;
+}

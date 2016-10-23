@@ -27,7 +27,7 @@ function fund_card() {
 					  			"funding_source_token": "aa643dc1-dafd-41e1-803c-a92ab31037ba"}),
 		  success: function (data) {
 		  	// alert( "Data Loaded: " + data );
-		  	window.location.href = "success.html";
+		  	window.location.href = "game-success.html";
 		  }
 	});
 
